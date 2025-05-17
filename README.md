@@ -1,2 +1,2 @@
 # Lesson-Scheduler
-Automatically sends text message reminders to clients
+Automatically sends text message reminders to students
