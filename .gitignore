@@ -39,3 +39,5 @@ yarn-error.*
 app-example
 /.env
 /env.d.ts
+
+services/ConfigService.ts
