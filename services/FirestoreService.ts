@@ -1,20 +1,21 @@
+import {Platform} from "react-native";
+
 if (typeof setImmediate === 'undefined') {
     (global as any).setImmediate = setTimeout;
 }
 
-import config from './ConfigService';
+import * as config from './ConfigService';
 
 import { initializeApp } from "firebase/app";
-import { Platform } from 'react-native';
 
 const androidCredentials = {
-    clientId: config.ANDROID_CLIENT_ID,
-    appId: config.ANDROID_APP_ID,
-    apiKey: config.ANDROID_API_KEY,
-    databaseURL: config.ANDROID_DATABASE_URL,
-    storageBucket: config.ANDROID_STORAGE_BUCKET,
-    messagingSenderId: config.ANDROID_MESSAGING_SENDER_ID,
-    projectId: config.ANDROID_PROJECT_ID,
+//     clientId: config.ANDROID_CLIENT_ID,
+//     appId: config.ANDROID_APP_ID,
+//     apiKey: config.ANDROID_API_KEY,
+//     databaseURL: config.ANDROID_DATABASE_URL,
+//     storageBucket: config.ANDROID_STORAGE_BUCKET,
+//     messagingSenderId: config.ANDROID_MESSAGING_SENDER_ID,
+//     projectId: config.ANDROID_PROJECT_ID,
 };
 
 const iosCredentials = {

@@ -1,7 +1,8 @@
+import { WEB_API_KEY } from '@/services/ConfigService';
 import { addLesson, Lesson, LESSON_STATUS } from '@/services/LessonService';
 import { addUser, getUsers, User } from '@/services/UserService';
 import React from "react";
-import { Text } from 'react-native';
+import { Pressable, Text, View } from 'react-native';
 
 async function handleAddUser() {
     const user: User = {
@@ -30,20 +31,14 @@ async function handleAddLesson() {
 
 export default function HomeScreen() {
     return (
-        <Text className={"bg-white"}>
-            AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-            AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-            AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-            AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        </Text>
-        // <View className="flex-1 items-center justify-center bg-white">
-        //     <Pressable onPress={handleAddUser} className={"bg-blue-500 p-8"}>
-        //         <Text>Add User</Text>
-        //     </Pressable>
-        //     <Pressable onPress={handleAddLesson} className={"bg-blue-500 p-8"}>
-        //         <Text>Add Lesson</Text>
-        //     </Pressable>
-        // </View>
+        <View className="flex-1 items-center justify-center bg-white">
+            <Pressable onPress={handleAddUser} className={"bg-blue-500 p-8"}>
+                <Text>Add User</Text>
+            </Pressable>
+            <Pressable onPress={handleAddLesson} className={"bg-blue-500 p-8"}>
+                <Text>Add Lesson</Text>
+            </Pressable>
+        </View>
     );
 }
 
